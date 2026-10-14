@@ -14,3 +14,9 @@ Next development must be driven by a human request, use the same pinned SDK,
 retain themes/fonts/large touch targets and verify any source rebuild on actual
 hardware. Do not repeat accepted user tests merely to fill a checklist. For a
 new board, verify pins, display geometry, identity and flash layout first.
+
+Public site is deployed at https://staffordlumsden.github.io/great-bespoke-cyd/.
+Live Playwright checks passed desktop/tablet/mobile/320 px, themes/persistence,
+actual fonts, every screenshot and navigation. Linux temporary-directory naming
+was corrected without changing firmware. Repository publication contains no
+SDK symlink, private configuration, device logs or excluded application folders.

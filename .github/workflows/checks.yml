@@ -7,14 +7,14 @@ permissions:
   contents: read
 jobs:
   native-and-browser:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     env:
       CXX: clang++
     steps:
       - uses: actions/checkout@v6
       - name: Native tests and release integrity
         run: bash tools/test.sh
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         with:
           node-version: '22'
           cache: npm

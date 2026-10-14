@@ -25,7 +25,8 @@
   },
   "browser_tests": {
     "File Server real HTML + mock API": "PASS",
-    "Pages desktop/tablet/mobile/320px, two themes, persistence, fonts, assets, navigation": "PASS"
+    "Pages desktop/tablet/mobile/320px, two themes, persistence, fonts, assets, navigation": "PASS",
+    "Published Pages site: fonts, all assets, both themes, persistence, 4 viewports and navigation": "PASS"
   },
   "screenshots": "Real renderers/browser UI with public fixtures; no live private sessions or hardware photographs",
   "release_binaries": "Accepted original binaries unchanged; public-layout rebuilds are candidates until physical acceptance",
@@ -35,5 +36,8 @@
     "No measured sleep current or universal throughput claim",
     "Compatibility SD key path and JSON theme tokens retained"
   ],
-  "ci": "See GitHub Actions for independent Linux checks after push"
+  "ci": {
+    "Linux native ASan/UBSan + release integrity + File Server browser + Pages browser": "PASS",
+    "run": "https://github.com/staffordlumsden/great-bespoke-cyd/actions/runs/38559331807"
+  }
 }
