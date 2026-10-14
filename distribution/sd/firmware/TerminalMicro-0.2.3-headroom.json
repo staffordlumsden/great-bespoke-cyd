@@ -1,0 +1,9 @@
+{
+  "project": "TerminalMicro",
+  "version": "0.2.3-headroom",
+  "size_bytes": 1376832,
+  "sha256": "53e369daa2d3bdaf32624888d86d38273b91a3ff41e709479eb35e73b2b027f7",
+  "chip": "esp32",
+  "slot_size": 1769472,
+  "image": "TerminalMicro-0.2.3-headroom.bin"
+}

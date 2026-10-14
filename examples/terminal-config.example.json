@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "device_name": "cyd-terminal",
+  "wifi": [
+    {
+      "ssid": "YOUR_2_4_GHZ_NETWORK",
+      "password": "REPLACE_ON_PRIVATE_SD_CARD",
+      "priority": 10
+    }
+  ],
+  "ssh_hosts": [
+    {
+      "id": "workbench",
+      "label": "Workbench",
+      "host": "192.0.2.42",
+      "port": 22,
+      "username": "example",
+      "auth": {
+        "method": "publickey",
+        "private_key_file": "/contextual-micro/ssh_keys/workbench.pem",
+        "passphrase_source": "none"
+      },
+      "known_host": {
+        "verification": "pinned",
+        "sha256_fingerprint": "SHA256:REPLACE_WITH_VERIFIED_SERVER_FINGERPRINT"
+      },
+      "terminal_type": "xterm",
+      "startup_command": "exec \"${SHELL:-/bin/sh}\" -l"
+    }
+  ],
+  "ui": {
+    "theme": "contextual",
+    "auto_connect_default_host": false,
+    "tailscale_visible": true,
+    "tailscale_enabled": false
+  }
+}

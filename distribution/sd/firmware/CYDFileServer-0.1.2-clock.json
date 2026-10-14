@@ -1,0 +1,9 @@
+{
+  "project": "CYDFileServer",
+  "version": "0.1.2-clock",
+  "size_bytes": 921888,
+  "sha256": "8ec5c081a0d120ce10719b425de24f12e0c345446bf567d9757fa5b2632e15f6",
+  "chip": "esp32",
+  "slot_size": 1769472,
+  "image": "CYDFileServer-0.1.2-clock.bin"
+}

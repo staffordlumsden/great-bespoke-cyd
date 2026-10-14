@@ -1,0 +1,15 @@
+._*
+.DS_Store
+.tools/
+**/build*/
+**/artifacts/
+**/__pycache__/
+**/sdkconfig
+node_modules/
+*.pem
+*.key
+.env*
+!*.example.json
+
+.tools
+._*

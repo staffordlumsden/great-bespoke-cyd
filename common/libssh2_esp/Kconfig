@@ -1,0 +1,21 @@
+menu "libssh2"
+    choice LIBSSH2_CRYPTO_ENGINE
+        prompt "Cryptography engine"
+        default LIBSSH2_CRYPTO_ENGINE_MBEDTLS
+        help
+            Cryptography backend used with libssh2. Only mbedTLS is supported
+            at present.
+
+        config LIBSSH2_CRYPTO_ENGINE_MBEDTLS
+            bool "mbedTLS"
+    endchoice
+
+    config LIBSSH2_DEBUG_ENABLE
+        bool "Compile libssh2 with debug logging"
+        default n
+        help
+            libssh2 must be compiled with debug logging functions before
+            logging is enabled at runtime. If this option is not enabled
+            loging functions are not generated in the final binary.
+
+endmenu

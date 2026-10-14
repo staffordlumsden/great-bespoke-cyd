@@ -1,0 +1,12 @@
+{
+  "name": "great-bespoke-cyd-docs",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Local browser checks for the static Pages site and File Server UI",
+  "scripts": {
+    "test": "node tools/test-site.cjs && node projects/file-server/tests/browser_ui.cjs"
+  },
+  "devDependencies": {
+    "playwright": "1.62.1"
+  }
+}

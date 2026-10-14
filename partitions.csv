@@ -1,0 +1,8 @@
+# Shared 4 MB layout. NVS and PHY retain their original addresses and sizes.
+# Name, Type, SubType, Offset, Size, Flags
+nvs,       data, nvs,     0x9000,   0x6000,
+phy_init,  data, phy,     0xf000,   0x1000,
+factory,   app,  factory, 0x10000,  0x80000,
+app0,      app,  ota_0,   0x90000,  0x1b0000,
+app1,      app,  ota_1,   0x240000, 0x1b0000,
+otadata,   data, ota,     0x3f0000, 0x2000,

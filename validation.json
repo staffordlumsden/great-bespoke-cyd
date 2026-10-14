@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-14",
+  "scope": [
+    "CYD Console",
+    "File Server",
+    "Terminal Micro"
+  ],
+  "hardware_written_during_publication": false,
+  "sdk": {
+    "version": "v5.5.5",
+    "commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f"
+  },
+  "source_builds": {
+    "Console": "PASS",
+    "File Server": "PASS",
+    "Terminal Micro": "PASS",
+    "generated HelloCYD scaffold": "PASS"
+  },
+  "native_tests": {
+    "tooling": "ASan + UBSan",
+    "Console UI and loader fault injection": "PASS",
+    "clock conversions": "PASS",
+    "File Server policy and renderer": "PASS",
+    "Terminal fonts, geometry, touch, ANSI and DMA bounds": "PASS"
+  },
+  "browser_tests": {
+    "File Server real HTML + mock API": "PASS",
+    "Pages desktop/tablet/mobile/320px, two themes, persistence, fonts, assets, navigation": "PASS"
+  },
+  "screenshots": "Real renderers/browser UI with public fixtures; no live private sessions or hardware photographs",
+  "release_binaries": "Accepted original binaries unchanged; public-layout rebuilds are candidates until physical acceptance",
+  "limits": [
+    "Full fresh-LAN phone provisioning walkthrough remains pending",
+    "No universal CYD clone or BLE keyboard acceptance",
+    "No measured sleep current or universal throughput claim",
+    "Compatibility SD key path and JSON theme tokens retained"
+  ],
+  "ci": "See GitHub Actions for independent Linux checks after push"
+}

@@ -1,0 +1,19 @@
+menu "Terminal Micro Options"
+
+config CM_M1_FIRMWARE
+    bool "Enable Wi-Fi and SD configuration"
+    default y
+
+config CM_M2_KEYBOARD
+    bool "Enable BLE keyboard support"
+    default y
+
+config CM_M3_PROBE
+    bool "Enable SSH authentication"
+    default y
+
+config CM_M4_TERMINAL
+    bool "Enable interactive terminal emulation"
+    default y
+
+endmenu
