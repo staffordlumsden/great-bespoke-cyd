@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 project_root="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)"
-test_dir="$(mktemp -d -t cyd-ui-tests)"
+test_dir="$(mktemp -d "${TMPDIR:-/tmp}/cyd-ui-tests.XXXXXX")"
 trap 'rm -rf "$test_dir"' EXIT
 mkdir -p "$1"
 crypto=-DCYD_NATIVE_APPLE

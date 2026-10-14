@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 project_root="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)"
-test_dir="$(mktemp -d -t cyd-sd-tests)"
+test_dir="$(mktemp -d "${TMPDIR:-/tmp}/cyd-sd-tests.XXXXXX")"
 trap 'rm -rf "$test_dir"' EXIT
 crypto=-DCYD_NATIVE_APPLE
 if [[ "$(uname -s)" != Darwin ]]; then crypto=-lcrypto; fi
