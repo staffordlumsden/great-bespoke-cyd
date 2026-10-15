@@ -7,4 +7,5 @@ bash projects/launcher/tests/run-clock-tests.sh
 bash projects/launcher/tests/run-sd-tests.sh "$root/distribution/sd/firmware/TerminalMicro-0.2.3-headroom.bin"
 bash projects/file-server/tests/run-native.sh
 bash projects/terminal-micro/tests/run-native.sh
+bash projects/ollama-cloud-usage/tests/run-native.sh
 python3 tools/validate_public.py

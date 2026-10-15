@@ -7,7 +7,7 @@ small separate SD-installed firmware apps. The Console stays simple, apps
 share readable PixelFonts and themes, and data/configuration persist on SD.
 Humans choose outcomes and judge physical readability; agents implement,
 test, package and leave reproducible evidence. This public edition includes
-Console, File Server and Terminal Micro only.
+Console, File Server, Terminal Micro and the early-access Ollama Cloud Usage app.
 
 ## Required architecture
 
@@ -60,6 +60,18 @@ Retain the accepted AES-CTR/MAC/packet chunk limits; test heap with BLE and
 Wi-Fi active and high-output interactive apps. No full xterm or arbitrary
 Unicode claim. Remote applications execute on the SSH server, not on CYD.
 
+## Ollama Cloud Usage
+
+Touch dashboard using the official fixed-host bearer API: included or legacy
+allowances, reset countdowns, purchased credits and hourly 24H requests. Convert
+API remaining percentages to used percentages. Show unavailable cost/token
+metrics as unknown; never invent plan or model statistics. Private key comes
+from SD `/private/ollama.json`, not the binary, cookies or NVS. Require valid
+time and verified HTTPS; disable redirects, bound JSON/transport work, respect
+rate limits and mark retained failed/aged data stale. Reuse read-only SD Wi-Fi
+profiles. Keep network I/O off the touch task and provide Console return.
+Its early-access package is a tested candidate; physical acceptance is pending.
+
 ## UX requirements
 
 Use shared PixelFonts with full licence; readable controls, stable pages,
@@ -76,6 +88,6 @@ parser/paths/hash failures, themes/hit targets, stale rows and relevant clocks.
 Physical tests cover actual install + run, NVS/bond retention, Console return,
 Run last, recovery, readable display and the app's real network/keyboard use.
 Label unperformed tests and separate renderer fixtures from device photographs.
-Publish one latest accepted package per app, SHA256SUMS and licence notices.
+Publish one current package per app, SHA256SUMS and licence notices. Label candidate apps as early-access prereleases and list their pending physical checks; never silently replace an accepted image with an unaccepted rebuild.
 A rebuilt candidate is not hardware accepted merely because its source matches
 an accepted version. Keep known limitations and handoff state explicit.

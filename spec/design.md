@@ -1,7 +1,7 @@
 # Visual and interaction language
 
 Use flat, rounded panels with crisp pixel lettering and line icons. Console,
-File Server and Terminal Micro should feel like one small toolkit, with the
+File Server, Terminal Micro and Ollama Usage should feel like one small toolkit, with the
 same title hierarchy, generous touch controls and a visible Console return.
 
 ## Fonts
@@ -41,3 +41,11 @@ ANSI terminal palette remains distinct, with bright enough blue on dark.
 - Progress states show direction/file/bytes, completion, cancel or error.
 - Keep terminal zoom, Live output and Console return easy to discover.
 - Screenshots must have public fixture data and an honest capture caption.
+
+## Ollama Usage
+
+Allowance meters, clear reset/countdown labels and a separate 24H chart. Match
+PixelFonts and mint/blue tokens; pair colour with USED/STALE/error text. Do not
+render missing API metrics as zero. Original candidate bottom controls are
+32 px high and require physical touch acceptance; retain that limitation rather
+than claiming every app already meets the preferred larger targets.

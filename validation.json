@@ -3,7 +3,8 @@
   "scope": [
     "CYD Console",
     "File Server",
-    "Terminal Micro"
+    "Terminal Micro",
+    "Ollama Cloud Usage (early access)"
   ],
   "hardware_written_during_publication": false,
   "sdk": {
@@ -14,19 +15,22 @@
     "Console": "PASS",
     "File Server": "PASS",
     "Terminal Micro": "PASS",
-    "generated HelloCYD scaffold": "PASS"
+    "generated HelloCYD scaffold": "PASS",
+    "Ollama Usage public layout": "PASS"
   },
   "native_tests": {
     "tooling": "ASan + UBSan",
     "Console UI and loader fault injection": "PASS",
     "clock conversions": "PASS",
     "File Server policy and renderer": "PASS",
-    "Terminal fonts, geometry, touch, ANSI and DMA bounds": "PASS"
+    "Terminal fonts, geometry, touch, ANSI and DMA bounds": "PASS",
+    "Ollama model/config/storage/poll/UI and HTTP transport fakes": "PASS"
   },
   "browser_tests": {
     "File Server real HTML + mock API": "PASS",
     "Pages desktop/tablet/mobile/320px, two themes, persistence, fonts, assets, navigation": "PASS",
-    "Published Pages site: fonts, all assets, both themes, persistence, 4 viewports and navigation": "PASS"
+    "Published Pages site: fonts, all assets, both themes, persistence, 4 viewports and navigation": "PASS",
+    "Featured Ollama release: 4 viewports, two themes, direct download and navigation": "PASS"
   },
   "screenshots": "Real renderers/browser UI with public fixtures; no live private sessions or hardware photographs",
   "release_binaries": "Accepted original binaries unchanged; public-layout rebuilds are candidates until physical acceptance",
@@ -38,6 +42,19 @@
   ],
   "ci": {
     "Linux native ASan/UBSan + release integrity + File Server browser + Pages browser": "PASS",
-    "run": "https://github.com/staffordlumsden/great-bespoke-cyd/actions/runs/38559331807"
+    "run": "https://github.com/staffordlumsden/great-bespoke-cyd/actions/runs/38559331807",
+    "scope": "Historical original release checks; new release CI is reported by GitHub Actions"
+  },
+  "ollama_usage_release": {
+    "version": "0.1.0",
+    "stage": "early-access prerelease",
+    "source_build": "PASS pinned SDK public layout",
+    "native": "PASS ASan/UBSan",
+    "screenshots": "Actual renderer/public fixtures, both themes",
+    "local_browser": "PASS 1440/768/390/320px, both themes",
+    "live_api_parser": "PASS host check; not ESP32 TLS acceptance",
+    "physical_cyd_acceptance": "PENDING",
+    "distributed_image_sha256": "881ab28385f34b1b0b586af4f9463db708759043c953e4678fd8d324514fafe8",
+    "credentials_included": false
   }
 }

@@ -20,3 +20,13 @@ The libssh2 port includes bounded receive/transmit staging adaptations; see
 AES-CTR/no-compression SSH client; they do not establish arbitrary cipher or
 large-message compatibility. No M5Launcher source, M5 board support or assets
 are used. Console is a custom ESP-IDF launcher for this CYD profile.
+
+## Ollama Usage
+
+The app uses shared PixelFonts/HAL/clock/Wi-Fi code and the pinned ESP-IDF JSON
+and TLS components. Its native tests vendor that SDK's cJSON source (MIT) under
+`projects/ollama-cloud-usage/tests/third_party/cjson`, with its full notice.
+The inspected browser extension is reference material; its MIT notice is retained
+in the app's `THIRD_PARTY_NOTICES.md`. The firmware uses an independent official
+API client, not the browser cookie/HTML scraper. The SD licence file preserves
+PixelFonts, ESP-IDF, Mbed TLS, cJSON and reference notices.

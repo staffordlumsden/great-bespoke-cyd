@@ -20,3 +20,19 @@ Live Playwright checks passed desktop/tablet/mobile/320 px, themes/persistence,
 actual fonts, every screenshot and navigation. Linux temporary-directory naming
 was corrected without changing firmware. Repository publication contains no
 SDK symlink, private configuration, device logs or excluded application folders.
+
+## Ollama Cloud Usage 0.1.0 early-access publication
+
+Added the app's portable source, optional local API checker, blank configuration,
+native tests and pinned cJSON test dependency. Public builds reuse shared Wi-Fi
+code; no excluded application source or private provisioning is included.
+The prepared SD candidate is preserved at 1,032,400 bytes and SHA-256
+`881ab28385f34b1b0b586af4f9463db708759043c953e4678fd8d324514fafe8`.
+
+README and Pages now feature a prominent NEW RELEASE / EARLY ACCESS banner,
+direct app download, setup steps and six public renderer captures. Site theme
+also changes paired device captures. Public ESP32 build, full native suite,
+release integrity and both browser suites pass locally. Original accepted
+binaries remain unchanged. Physical CYD acceptance for Ollama Usage is pending;
+this is an explicitly separate prerelease, not a replacement accepted release.
+See GitHub Releases and Actions for current publication/deployment results.

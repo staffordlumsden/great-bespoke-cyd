@@ -19,6 +19,17 @@ The Console is custom ESP-IDF firmware, independent of M5Launcher.
 4. **Run last** opens the last successful installed package. Verify Console
    return, Run last, retained keyboard bond and the app's actual operation.
 
+## Ollama Usage early access
+
+Download its separate app archive from [Ollama Usage 0.1.0](https://github.com/staffordlumsden/great-bespoke-cyd/releases/tag/ollama-usage-v0.1.0),
+verify against that release's SHA256SUMS, and copy `firmware/` into the existing
+card root. With an SD reader, separately create `/private/ollama.json` using
+[the blank template](../projects/ollama-cloud-usage/ollama.example.json).
+The key is not distributed and cannot be uploaded through File Server's browser:
+its served tree excludes `/private`. Reuse saved Wi-Fi or add a personal 2.4 GHz
+profile. Then use Console's Install + run as above. See [the app guide](../projects/ollama-cloud-usage/README.md)
+for controls, clock requirements and pending physical acceptance.
+
 ## First installation / another flash layout
 
 A new device needs a matching bootloader, table and factory Console. The app

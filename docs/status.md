@@ -1,4 +1,4 @@
-# Release status — 2026-10-14
+# Release status
 
 | Firmware | Released binary | Evidence from the original tested CYD |
 |---|---|---|
@@ -24,3 +24,21 @@ physical acceptance before replacing accepted release packages.
 
 Console radio tiles and Tailscale are placeholders. No native USB disk mode.
 The excluded legacy app and other private apps are not part of this edition.
+
+## New early-access release — Ollama Cloud Usage 0.1.0
+
+- Published candidate: 1,032,400 bytes; application, JSON manifest and notices
+  are under `distribution/sd/firmware`. Separate app-only release archive.
+- Pinned ESP-IDF cross-build and native ASan/UBSan model, private configuration,
+  filesystem fallback/preservation, retry/rate-limit policy, UI and simulated
+  HTTP transport checks pass. Fixture screenshots cover both themes.
+- Live official balance/history endpoints returned 200 and passed the actual
+  parser on the development host. Legacy account checked live; credit-based
+  account and optional cost/token fields checked with fixtures.
+- Candidate copied and byte-verified on the development card; this is not
+  physical install/operation acceptance. No API key is part of the release.
+- Pending: Console install/Run last, real ESP32 TLS/heap/stack, readable/tappable
+  UI, actual meters/reset accuracy, reconnect, display sleep/wake and Console
+  return. This app does not replace the accepted release evidence above.
+- Public sources use the shared Wi-Fi core; a fresh build is a candidate, not
+  guaranteed byte-identical to the distributed prepared image.
