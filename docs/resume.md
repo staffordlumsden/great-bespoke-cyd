@@ -103,3 +103,16 @@ caches are included. See app guides/status for acceptance limits. Existing
 bootstrap latest and prior accepted assets remain unchanged. New public source
 builds and native/browser checks are recorded in validation.json; CI is shown
 on GitHub. No hardware/SD writes in this publication.
+
+## 17 October 2026 — Pages spacing correction
+
+User reported excessive empty space in the Weather/Quicknote feature. Replaced
+the >1,000px desktop release feature with compact thumbnail/text/action cards,
+moved the project introduction first, removed the redundant overview row and
+reduced hero/section/gallery spacing. Mobile omits the duplicate Console hero
+preview; detailed guides and both new-app screenshots remain. PixelFonts,
+colours, downloads and Usage ordering are retained. Consolidated the stylesheet
+and versioned its URL to prevent stale CSS after deployment. Browser tests pass
+at 1440/1024/768/390/320px in both themes, including bounded feature height/gap,
+fonts/images/navigation/persistence and no browser errors. No firmware changes
+or hardware/SD writes. Final deployment/live verification tracked by GitHub.
