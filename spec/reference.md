@@ -66,3 +66,12 @@ Physical acceptance remains pending.
 bash projects/usage/tests/run-native.sh
 bash projects/usage/firmware/tools/build.sh build
 ```
+
+## RGB LED app
+
+LED Micro 0.1.0: 306,240 bytes, SHA-256
+`41af56faff22d0ad2625f06fa82a0abfb3c5b71345a276544dd405a7efb05512`.
+GPIO4 red, GPIO16 green, GPIO17 blue, active low; low-speed LEDC timer0,
+channels0–2, inverted 4 kHz/12-bit PWM. User confirmed colour/brightness/patterns
+and Console/Run last on 16 October 2026; no measured PWM frequency/current claim.
+The pin map is from the [primary reference](https://github.com/witnessmenow/ESP32-Cheap-Yellow-Display/blob/main/PINS.md#rgb-led).

@@ -1,5 +1,5 @@
 cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30  ESP-IDF-LICENSE.txt
-69c3e28b75018ec67f27994a2487c625ce7d45fb5ac0a5df6acffa96ad35714e  README.md
+88b603781ba08ff9d51e99cc00a3802c74a4205c969c8e5f329eb697af15e0ce  README.md
 5851c0c2e04e8add20afb5fdc93c51a301ff970d6b4c40b49a6fdf933c31329f  console/CYDConsole-0.3.3-sleep.bin
 d872acc52c9aba32b73d840ffe15ce8ad7c2595d5a26d0492dbc8303dc71120d  console/LICENSE.txt
 1ff3841ce0f3289288293468906da016e72513c6c5494f55db2da930af9c6075  console/bootloader.bin
@@ -8,6 +8,9 @@ ed383cbc1c03ca6d97d5cad2daf172e6c121c2704af1e5be300ac2a7d362bc7f  console/partit
 f1c026999a25f97372342bed6a72fce3f9b0974e37f16d49d08bba68f89905a9  sd/firmware/CYDFileServer-0.1.2-clock-LICENSE.txt
 8ec5c081a0d120ce10719b425de24f12e0c345446bf567d9757fa5b2632e15f6  sd/firmware/CYDFileServer-0.1.2-clock.bin
 69b8880fcc3964ecbe4f197e8349435195a6d87cc0b1df5e9df8a82188d44a6b  sd/firmware/CYDFileServer-0.1.2-clock.json
+341c86a5a967958a6f351e72f940f84f36ec1461d9485595a8d528e4102622f0  sd/firmware/LEDMicro-0.1.0-LICENSE.txt
+41af56faff22d0ad2625f06fa82a0abfb3c5b71345a276544dd405a7efb05512  sd/firmware/LEDMicro-0.1.0.bin
+c8f0af7d5da1aaa8098365073b97eed29ec85b6291abd7d2ee783c2558493092  sd/firmware/LEDMicro-0.1.0.json
 5411566d5538f1f778748f045873da8ca7d6118a5390b0c9e599214b265d70e4  sd/firmware/TerminalMicro-0.2.3-headroom-LICENSE.txt
 53e369daa2d3bdaf32624888d86d38273b91a3ff41e709479eb35e73b2b027f7  sd/firmware/TerminalMicro-0.2.3-headroom.bin
 6a95b593c135ed4984f2de7098f2de14e190f83b383c94c286cddc425fefdba6  sd/firmware/TerminalMicro-0.2.3-headroom.json

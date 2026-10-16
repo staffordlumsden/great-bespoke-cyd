@@ -74,3 +74,19 @@ no instrumented heap/stack or independent reset-accuracy measurement was taken.
 OpenRouter/custom live accounts, Run last, reconnect, sleep/wake and Console
 return were not separately tested in this check. Keep the release early access.
 No firmware bytes, private settings, keys or device state changed for this record.
+
+## 2026-10-16 — LED Micro 0.1.0 public edition
+
+Added portable LED Micro source/tests, the exact accepted 306,240-byte image,
+full notices, six native-renderer captures, README/Pages controls/installation
+and developer-reference updates. Public source uses the shared HAL and pinned
+build wrapper; no unrelated apps, private settings or device logs are included.
+User confirms colours/brightness/power, patterns/speed, flashlight, Console
+LED-off and Run last starting off. RGB mixer/themes/preferences were not
+separately physically reported; no instrumented PWM/optical/current claim.
+Pinned public build and full native/browser suite pass locally. Pages covers
+four widths and both themes. The release is a standalone app; Console/bootstrap
+latest and other accepted images remain unchanged. Source rebuilds remain
+candidates rather than being silently substituted for the accepted binary.
+Image SHA-256: 41af56faff22d0ad2625f06fa82a0abfb3c5b71345a276544dd405a7efb05512.
+See release led-micro-v0.1.0 and current GitHub Actions for publication results.

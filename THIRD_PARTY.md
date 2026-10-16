@@ -30,3 +30,12 @@ The inspected browser extension is reference material; its MIT notice is retaine
 in the app's `THIRD_PARTY_NOTICES.md`. The firmware uses an independent official
 API client, not the browser cookie/HTML scraper. The SD licence file preserves
 PixelFonts, ESP-IDF, Mbed TLS, cJSON and reference notices.
+
+## LED Micro
+
+The app reuses the shared HAL/Console-return contract, pinned PixelFonts and
+ESP-IDF LEDC GPIO drivers. No network/Bluetooth/SSH or external app source is
+included. Active-low R4/G16/B17 wiring is a documented hardware fact from the
+[primary CYD pin reference](https://github.com/witnessmenow/ESP32-Cheap-Yellow-Display/blob/main/PINS.md#rgb-led);
+no upstream LED driver source was copied. Full font/SDK/Mbed TLS notices are in
+[the app](projects/led-micro/THIRD_PARTY_NOTICES.md) and its SD licence file.

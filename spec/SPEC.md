@@ -7,7 +7,7 @@ small separate SD-installed firmware apps. The Console stays simple, apps
 share readable PixelFonts and themes, and data/configuration persist on SD.
 Humans choose outcomes and judge physical readability; agents implement,
 test, package and leave reproducible evidence. This public edition includes
-Console, File Server, Terminal Micro and the early-access Usage app.
+Console, File Server, Terminal Micro, LED Micro and the early-access Usage app.
 
 ## Required architecture
 
@@ -73,7 +73,18 @@ from SD `/private/usage.json` (legacy `/private/ollama.json` fallback), not the 
 time and verified HTTPS; disable redirects, bound JSON/transport work, respect
 rate limits and mark retained failed/aged data stale. Reuse read-only SD Wi-Fi
 profiles. Keep network I/O off the touch task and provide Console return.
-Its early-access package is a tested candidate; physical acceptance is pending.
+Its basic SD install/Codex-Ollama switching is user-confirmed; extended checks
+remain pending.
+
+## LED Micro
+
+Offline active-low RGB control: R4/G16/B17, inverted hardware PWM, bounded
+brightness/RGB channels, monotonic solid/flash/alternating patterns and white
+flashlight. Power starts OFF and Console return stops PWM/drives outputs off.
+Persist only the app-owned led_ui settings, never power state. Reuse PixelFonts,
+34 px minimum controls and both themes; no radio initialization or SD config.
+See the app guide and status index for functional acceptance and measurements
+that were not taken. No other hardware peripherals are repurposed.
 
 ## UX requirements
 

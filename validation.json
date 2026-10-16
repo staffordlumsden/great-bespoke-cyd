@@ -65,5 +65,14 @@
     "openrouter": "Fixture-tested; no key requested",
     "physical_acceptance": "PASS user-observed SD install, Codex meters and switching back to Ollama on 2026-10-16; extended runtime checks pending",
     "private_config_or_oauth_published": false
+  },
+  "led_micro_0_1_0": {
+    "version": "0.1.0",
+    "physical_acceptance": "PASS user-observed primary colours, brightness, power, patterns/speed, flashlight, Console/Run last on 2026-10-16",
+    "size_bytes": 306240,
+    "distributed_image_sha256": "41af56faff22d0ad2625f06fa82a0abfb3c5b71345a276544dd405a7efb05512",
+    "private_build_native_package": "PASS",
+    "public_build_native_browser": "PASS pinned public-layout ESP32 build, full native suite, four-viewport two-theme Pages and File Server browser tests",
+    "limits": "RGB mixer, themes and saved preferences not separately physically reported; no instrumented PWM/optical/current measurements"
   }
 }

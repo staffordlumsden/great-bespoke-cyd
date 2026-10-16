@@ -1,0 +1,9 @@
+{
+  "project": "LEDMicro",
+  "version": "0.1.0",
+  "size_bytes": 306240,
+  "sha256": "41af56faff22d0ad2625f06fa82a0abfb3c5b71345a276544dd405a7efb05512",
+  "chip": "esp32",
+  "slot_size": 1769472,
+  "image": "LEDMicro-0.1.0.bin"
+}

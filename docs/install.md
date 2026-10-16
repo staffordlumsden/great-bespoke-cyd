@@ -79,3 +79,13 @@ Every app also offers Console return. Console Shutdown is ESP32 deep sleep;
 tap to wake. It cannot cut the USB supply, so a board power LED may stay on.
 Keep power stable throughout installation. Hash checks detect corruption,
 not a malicious unsigned package: install firmware only from trusted sources.
+
+## LED Micro
+
+Download the [LED Micro release](https://github.com/staffordlumsden/great-bespoke-cyd/releases/tag/led-micro-v0.1.0).
+Copy its matching `LEDMicro-0.1.0.bin`, `.json` and `-LICENSE.txt` files to SD
+`/firmware`, preserving existing files. In Console choose Load from SD Card →
+LEDMicro-0.1.0 → Install + run. No network/key configuration is needed. The LED
+starts OFF; tap LED OFF to enable it. CONSOLE switches it off before returning.
+See [the controls](../projects/led-micro/README.md). No USB flashing is required
+for an existing compatible Console installation.

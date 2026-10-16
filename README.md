@@ -1,6 +1,6 @@
 # Great Bespoke CYD
 
-**A resident Console, a multi-provider AI usage dashboard, browser SD file transfer and a readable SSH terminal for the original ESP32 Cheap Yellow Display.**
+**A resident Console, a multi-provider AI usage dashboard, browser SD file transfer, a readable SSH terminal and RGB LED controls for the original ESP32 Cheap Yellow Display.**
 
 [Project website](https://staffordlumsden.github.io/great-bespoke-cyd/) ·
 [Download firmware](https://github.com/staffordlumsden/great-bespoke-cyd/releases/latest) ·
@@ -28,6 +28,27 @@ Pinned builds, automated tests and live host Ollama/Codex/parser checks pass.
 Ollama are user-confirmed. Extended runtime checks remain pending. The download contains no real keys or
 bridge certificates. An SD reader provisions the separate private configuration.
 
+## New app: LED Micro 0.1.0
+
+**A small offline controller for the CYD's RGB LED.** Choose a colour, mix RGB,
+set brightness or use solid/flashing light. Alternate blue/red, green/yellow or
+green/white, adjust the speed, or tap FLASHLIGHT for full-brightness solid white.
+The same PixelFonts, dark and mint/blue themes and large touch controls keep it
+familiar. It needs no network, keyboard or configuration file.
+
+[**Download LED Micro 0.1.0**](https://github.com/staffordlumsden/great-bespoke-cyd/releases/tag/led-micro-v0.1.0) ·
+[Controls and installation](projects/led-micro/README.md) ·
+[See the screens](https://staffordlumsden.github.io/great-bespoke-cyd/#led)
+
+![LED Micro colour controls](site/assets/screenshots/led-colours-dark.png)
+![LED Micro patterns in mint/blue](site/assets/screenshots/led-patterns-light.png)
+
+**User-accepted on the tested CYD:** SD installation, primary colours,
+brightness, power, all patterns/speeds, flashlight and Console/Run last. Power
+starts OFF and Console return turns the LED off. The RGB mixer, themes and
+preference persistence have native coverage but were not separately reported
+in the physical check. Previews are actual renderer fixtures, not photographs.
+
 ---
 
 ![Console home, actual firmware-renderer capture](site/assets/screenshots/console-dark.png)
@@ -47,10 +68,10 @@ more than squeezing another row of tiny controls onto a 320×240 panel.
 | [CYD Console](projects/launcher/README.md) | Resident SD firmware launcher, clock, themes, sleep/touch wake | **0.3.3-sleep** |
 | [File Server](projects/file-server/README.md) | Browser upload/download over 2.4 GHz Wi-Fi, progress/cancel, network setup | **0.1.2-clock** |
 | [Terminal Micro](projects/terminal-micro/README.md) | BLE keyboard + pinned-host SSH + bounded ANSI terminal | **0.2.3-headroom** |
-
 | [Usage](projects/usage/README.md) | Ollama/Codex allowances, OpenRouter key budgets and custom feeds | **0.2.0 · early access** |
+| [LED Micro](projects/led-micro/README.md) | Offline RGB LED, colour/brightness, patterns and white flashlight | **0.1.0 · user-accepted** |
 
-This public edition contains these four tools and their shared dependencies.
+This public edition contains these five tools and their shared dependencies.
 Other private apps are excluded. Console is custom ESP-IDF firmware; it is not
 a fork or port of M5Launcher.
 
@@ -63,7 +84,7 @@ mock API. They explain the layout without exposing network names, credentials,
 host fingerprints or private terminal output. They do not substitute for hardware
 acceptance. The website's decorative yellow device frame is CSS.
 
-Console, File Server and Terminal Micro preserve the builds accepted on the original tested CYD. Usage is a separately labelled early-access candidate.
+Console, File Server, Terminal Micro and LED Micro preserve the builds accepted on the original tested CYD. Usage is a separately labelled early-access candidate.
 Source layout has been made portable and shared terminal code extracted to
 `common/`. A source rebuild is a **candidate**, not a bit-identical or newly
 hardware-accepted image. See [release evidence and limits](docs/status.md) and

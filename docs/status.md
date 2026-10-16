@@ -5,6 +5,7 @@
 | Console | 0.3.3-sleep, 336000 bytes | SD installs / Run last / touch recovery; theme and complete layout; shutdown stays dark and touch wakes |
 | File Server | 0.1.2-clock, 921888 bytes | Upload, download, cancel; themes and readable code; clock helper |
 | Terminal Micro | 0.2.3-headroom, 1376832 bytes | B1/touch/readability; SSH shells on two LAN hosts; high-output remote TUI remains connected; SD install and Run last |
+| LED Micro | 0.1.0, 306240 bytes | User confirms SD install, primary colours, brightness, on/off, flashing/alternations/speed, white flashlight, LED off on Console return and Run last starting off |
 
 Evidence is user-observed acceptance plus private redacted-result records;
 raw UART, network identities and credentials are deliberately not published.
@@ -42,5 +43,16 @@ no account key was requested. See the app guide for the read-only host bridge.
 On 16 October 2026 the user confirmed Console SD installation, Codex usage
 meters and switching back to Ollama work on the tested CYD. Still pending:
 Run last, instrumented MCU memory, independent reset accuracy, reconnect,
-display sleep and Console return. This does not supersede the three accepted binaries above. Public source
+display sleep and Console return. This does not supersede the accepted binaries above. Public source
 rebuilds remain candidates, not guaranteed bit-identical to the prepared image.
+
+## LED Micro 0.1.0 — acceptance limits
+
+Accepted 16 October 2026 by the user on the tested original CYD. The app is
+separate from Console and operates offline. RGB-mixer adjustments, physical
+theme switching and saved preference persistence were not separately reported;
+native tests cover their models/layouts. No independent electrical, optical,
+PWM timing or current measurement was taken. The prepared image checksum is
+41af56faff22d0ad2625f06fa82a0abfb3c5b71345a276544dd405a7efb05512.
+Source-only public layout changes affect the build wrapper, not the accepted
+binary. No NVS erasure, partition change or other app update is involved.
