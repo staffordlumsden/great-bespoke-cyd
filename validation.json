@@ -4,7 +4,7 @@
     "CYD Console",
     "File Server",
     "Terminal Micro",
-    "Ollama Cloud Usage (early access)"
+    "Usage (early access)"
   ],
   "hardware_written_during_publication": false,
   "sdk": {
@@ -56,5 +56,14 @@
     "physical_cyd_acceptance": "PENDING",
     "distributed_image_sha256": "881ab28385f34b1b0b586af4f9463db708759043c953e4678fd8d324514fafe8",
     "credentials_included": false
+  },
+  "usage_0_2_0": {
+    "version": "0.2.0",
+    "prepared_size": 1050400,
+    "native": "PASS ASan/UBSan and Python HTTPS/RPC tests",
+    "live": "Ollama and existing-login Codex feed pass actual firmware parser",
+    "openrouter": "Fixture-tested; no key requested",
+    "physical_acceptance": "PENDING",
+    "private_config_or_oauth_published": false
   }
 }

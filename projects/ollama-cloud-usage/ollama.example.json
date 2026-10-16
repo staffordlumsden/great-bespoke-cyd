@@ -1,6 +1,0 @@
-{
-  "api_key": "REPLACE_WITH_YOUR_DEDICATED_OLLAMA_KEY",
-  "wifi": [
-    {"ssid": "YOUR_2.4_GHZ_NETWORK", "password": "YOUR_NETWORK_PASSWORD", "priority": 10}
-  ]
-}

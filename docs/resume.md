@@ -36,3 +36,31 @@ release integrity and both browser suites pass locally. Original accepted
 binaries remain unchanged. Physical CYD acceptance for Ollama Usage is pending;
 this is an explicitly separate prerelease, not a replacement accepted release.
 See GitHub Releases and Actions for current publication/deployment results.
+
+## 2026-10-16 — Usage 0.2.0 multi-provider candidate
+
+Renamed the app/project to Usage. Ollama remains a direct HTTPS provider;
+Codex uses an authenticated, verified HTTPS host bridge reading only the
+signed-in CLI's account/rateLimits/read RPC. OAuth remains on the host. Optional
+OpenRouter key-budget/spending and bounded custom JSON feeds are supported;
+these two adapters are fixture-tested, not live-account verified. Up to four
+sources have independent snapshots, polling/retry and freshness. Source picker,
+34 px touch controls, both palettes, PixelFonts and legacy Ollama config/theme
+compatibility are retained. No OpenAI Platform API key is required.
+
+Pinned private and portable public builds pass. Image is 1,050,400 bytes;
+SHA-256 217fa28c529e37d1e4521651acac3e5d4fad21ced0ad170f0ea1345d7d11277e.
+Native sanitizer/HTTP/provider tests and seven Python bridge TLS/RPC tests pass.
+Public source checks and browser tests pass in four viewports and both themes;
+actual renderer fixture captures inspected. Live Ollama endpoints and verified
+Codex bridge HTTPS return 200 and pass the actual firmware parsers. No account
+values are persisted in public evidence. Hardware acceptance remains pending.
+
+Private development-card provisioning was byte-verified and safely ejected;
+existing files were preserved. No real configuration is distributed.
+Only the read-only feed token and public CA reach the card; host private keys,
+Codex OAuth and bridge configuration stay on the Mac. No USB flash or partition
+change. Next: Console → Load from SD Card → Usage-0.2.0 → Install + run; select
+Codex and switch back to Ollama. Record observed results before accepting the
+candidate. ESP32 TLS/memory, touch, reconnect, sleep and Console/Run last still
+need device evidence. Existing accepted release/apps are unchanged.

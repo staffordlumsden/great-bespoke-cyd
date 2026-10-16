@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "provider": "my-ai",
+  "updated_at": 1792108800,
+  "meters": [
+    {"label": "MONTHLY", "used_percent": 25, "resets_at": null}
+  ],
+  "stats": [
+    {"label": "CREDITS", "value": "15 remaining"}
+  ]
+}

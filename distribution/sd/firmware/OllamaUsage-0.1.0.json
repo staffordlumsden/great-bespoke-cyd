@@ -1,9 +1,0 @@
-{
-  "project": "OllamaUsage",
-  "version": "0.1.0",
-  "size_bytes": 1032400,
-  "sha256": "881ab28385f34b1b0b586af4f9463db708759043c953e4678fd8d324514fafe8",
-  "chip": "esp32",
-  "slot_size": 1769472,
-  "image": "OllamaUsage-0.1.0.bin"
-}

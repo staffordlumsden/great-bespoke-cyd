@@ -25,20 +25,21 @@ physical acceptance before replacing accepted release packages.
 Console radio tiles and Tailscale are placeholders. No native USB disk mode.
 The excluded legacy app and other private apps are not part of this edition.
 
-## New early-access release — Ollama Cloud Usage 0.1.0
+## Usage 0.2.0 — current early access
 
-- Published candidate: 1,032,400 bytes; application, JSON manifest and notices
-  are under `distribution/sd/firmware`. Separate app-only release archive.
-- Pinned ESP-IDF cross-build and native ASan/UBSan model, private configuration,
-  filesystem fallback/preservation, retry/rate-limit policy, UI and simulated
-  HTTP transport checks pass. Fixture screenshots cover both themes.
-- Live official balance/history endpoints returned 200 and passed the actual
-  parser on the development host. Legacy account checked live; credit-based
-  account and optional cost/token fields checked with fixtures.
-- Candidate copied and byte-verified on the development card; this is not
-  physical install/operation acceptance. No API key is part of the release.
-- Pending: Console install/Run last, real ESP32 TLS/heap/stack, readable/tappable
-  UI, actual meters/reset accuracy, reconnect, display sleep/wake and Console
-  return. This app does not replace the accepted release evidence above.
-- Public sources use the shared Wi-Fi core; a fresh build is a candidate, not
-  guaranteed byte-identical to the distributed prepared image.
+Renamed from Ollama Usage, adding Codex, optional OpenRouter and custom feeds.
+Prepared image: 1,050,400 bytes. Current files are under `distribution/sd/firmware`.
+The previous Ollama 0.1.0 package remains in its historical GitHub release/tag.
+
+Pinned public SDK build and native ASan/UBSan model/config, feed/OpenRouter,
+source UI and actual HTTP-code checks pass. Python tests exercise real HTTPS,
+CA trust, bearer auth, read-only routing, stale/custom feeds and Codex's minimal
+RPC. Both live Ollama endpoints and the existing-login Codex HTTPS feed passed
+the actual C++ parser on the development host. Public screenshots are fixtures.
+No OAuth tokens or real private files are included. OpenRouter is fixture-tested;
+no account key was requested. See the app guide for the read-only host bridge.
+
+Pending physical CYD acceptance: install/Run last, actual MCU TLS/memory, source
+selection/readability, reset accuracy, reconnect, display sleep and Console
+return. This does not supersede the three accepted binaries above. Public source
+rebuilds remain candidates, not guaranteed bit-identical to the prepared image.

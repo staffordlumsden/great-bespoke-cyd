@@ -1,26 +1,31 @@
 # Great Bespoke CYD
 
-**A resident Console, an Ollama usage dashboard, browser SD file transfer and a readable SSH terminal for the original ESP32 Cheap Yellow Display.**
+**A resident Console, a multi-provider AI usage dashboard, browser SD file transfer and a readable SSH terminal for the original ESP32 Cheap Yellow Display.**
 
 [Project website](https://staffordlumsden.github.io/great-bespoke-cyd/) ·
 [Download firmware](https://github.com/staffordlumsden/great-bespoke-cyd/releases/latest) ·
 [Install safely](docs/install.md) · [Build a new app](spec/SPEC.md)
 
-## New release: Ollama Cloud Usage 0.1.0
+## New release: Usage 0.2.0
 
-**Your cloud allowance, on your CYD.** Session/weekly meters or included credits,
-reset countdowns and a 24-hour request chart, with touch controls and both themes.
+**Ollama + Codex, with room for more.** The renamed Usage app adds a source
+selector, Codex's five-hour/weekly allowances, optional OpenRouter key spending
+and authenticated custom JSON feeds. Same PixelFonts and both themes.
 
-[**Download Ollama Usage — early access**](https://github.com/staffordlumsden/great-bespoke-cyd/releases/tag/ollama-usage-v0.1.0) ·
-[Setup and controls](projects/ollama-cloud-usage/README.md) ·
-[See the new dashboard](https://staffordlumsden.github.io/great-bespoke-cyd/#ollama)
+[**Download Usage 0.2.0 — early access**](https://github.com/staffordlumsden/great-bespoke-cyd/releases/tag/usage-v0.2.0) ·
+[Setup, existing Codex login and providers](projects/usage/README.md) ·
+[See the dashboard](https://staffordlumsden.github.io/great-bespoke-cyd/#usage)
 
-![Ollama Usage, actual dark firmware-renderer fixture](site/assets/screenshots/ollama-legacy-dark.png)
-![Ollama Usage hourly request chart, public fixture](site/assets/screenshots/ollama-activity-light.png)
+![Codex windows, public firmware-renderer fixture](site/assets/screenshots/usage-codex-dark.png)
+![Usage source selector, public firmware-renderer fixture](site/assets/screenshots/usage-sources-light.png)
 
-Build, automated checks and live API/parser checks pass. **Physical CYD acceptance
-is pending.** The download contains firmware, not your private API key. Use an SD
-reader for the separate `/private/ollama.json`; File Server does not expose it.
+The Mac bridge reuses the signed-in Codex CLI and keeps OAuth on the host.
+The CYD receives read-only usage over verified HTTPS. No OpenAI Platform key
+is required. OpenRouter needs its own key only if you choose to add it.
+
+Pinned builds, automated tests and live host Ollama/Codex/parser checks pass.
+**Physical CYD acceptance is pending.** The download contains no real keys or
+bridge certificates. An SD reader provisions the separate private configuration.
 
 ---
 
@@ -42,7 +47,7 @@ more than squeezing another row of tiny controls onto a 320×240 panel.
 | [File Server](projects/file-server/README.md) | Browser upload/download over 2.4 GHz Wi-Fi, progress/cancel, network setup | **0.1.2-clock** |
 | [Terminal Micro](projects/terminal-micro/README.md) | BLE keyboard + pinned-host SSH + bounded ANSI terminal | **0.2.3-headroom** |
 
-| [Ollama Cloud Usage](projects/ollama-cloud-usage/README.md) | Touch dashboard for cloud allowances, reset timers and 24H requests | **0.1.0 · early access** |
+| [Usage](projects/usage/README.md) | Ollama/Codex allowances, OpenRouter key budgets and custom feeds | **0.2.0 · early access** |
 
 This public edition contains these four tools and their shared dependencies.
 Other private apps are excluded. Console is custom ESP-IDF firmware; it is not
@@ -57,7 +62,7 @@ mock API. They explain the layout without exposing network names, credentials,
 host fingerprints or private terminal output. They do not substitute for hardware
 acceptance. The website's decorative yellow device frame is CSS.
 
-Console, File Server and Terminal Micro preserve the builds accepted on the original tested CYD. Ollama Usage is a separately labelled early-access candidate.
+Console, File Server and Terminal Micro preserve the builds accepted on the original tested CYD. Usage is a separately labelled early-access candidate.
 Source layout has been made portable and shared terminal code extracted to
 `common/`. A source rebuild is a **candidate**, not a bit-identical or newly
 hardware-accepted image. See [release evidence and limits](docs/status.md) and
@@ -165,7 +170,7 @@ server key if the card/device is lost.
 
 ## Install the release
 
-For Ollama Usage, use the separate [0.1.0 early-access download](https://github.com/staffordlumsden/great-bespoke-cyd/releases/tag/ollama-usage-v0.1.0) and its [SD setup guide](projects/ollama-cloud-usage/README.md).
+For Usage, use the separate [0.2.0 early-access download](https://github.com/staffordlumsden/great-bespoke-cyd/releases/tag/usage-v0.2.0) and its [SD setup guide](projects/usage/README.md).
 
 For the accepted Console/File Server/Terminal Micro bundle, download the latest `great-bespoke-cyd-*.zip` from [Releases](https://github.com/staffordlumsden/great-bespoke-cyd/releases/latest).
 Extract it, enter its `distribution` folder, and verify `SHA256SUMS.txt` with
@@ -179,7 +184,7 @@ backup procedure](docs/install.md). You need a matching bootloader, partition
 table, initial OTA selector and factory Console. Never flash an app-only image
 to factory at `0x10000`. No erase-all operation is part of routine installation.
 
-Accepted prebuilt app sizes are 921,888 and 1,376,832 bytes. The Ollama Usage candidate is 1,032,400 bytes. Console is 336,000 bytes.
+Accepted prebuilt app sizes are 921,888 and 1,376,832 bytes. The Usage candidate is 1,050,400 bytes. Console is 336,000 bytes.
 Both app slots are 1,769,472 bytes; factory is 524,288 bytes. Image hashes detect
 corruption, **not publisher authenticity**; packages are not signed firmware.
 Only install firmware from sources you trust.
@@ -208,7 +213,7 @@ bash tools/setup-idf.sh
 bash projects/launcher/firmware/tools/build.sh build
 bash projects/file-server/firmware/tools/build.sh build
 bash projects/terminal-micro/firmware/tools/build.sh build
-bash projects/ollama-cloud-usage/firmware/tools/build.sh build
+bash projects/usage/firmware/tools/build.sh build
 bash tools/test.sh
 ```
 

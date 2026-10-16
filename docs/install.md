@@ -19,16 +19,15 @@ The Console is custom ESP-IDF firmware, independent of M5Launcher.
 4. **Run last** opens the last successful installed package. Verify Console
    return, Run last, retained keyboard bond and the app's actual operation.
 
-## Ollama Usage early access
+## Usage 0.2.0 early access
 
-Download its separate app archive from [Ollama Usage 0.1.0](https://github.com/staffordlumsden/great-bespoke-cyd/releases/tag/ollama-usage-v0.1.0),
-verify against that release's SHA256SUMS, and copy `firmware/` into the existing
-card root. With an SD reader, separately create `/private/ollama.json` using
-[the blank template](../projects/ollama-cloud-usage/ollama.example.json).
-The key is not distributed and cannot be uploaded through File Server's browser:
-its served tree excludes `/private`. Reuse saved Wi-Fi or add a personal 2.4 GHz
-profile. Then use Console's Install + run as above. See [the app guide](../projects/ollama-cloud-usage/README.md)
-for controls, clock requirements and pending physical acceptance.
+Download the separate [Usage release](https://github.com/staffordlumsden/great-bespoke-cyd/releases/tag/usage-v0.2.0), verify its checksums and copy
+its `firmware/` to the existing FAT32 card. For Codex, run the supplied host
+helper using your existing CLI login, then separately copy the private
+`usage.json` and public CA certificate to the SD `/private` folder using a reader.
+The bridge keeps OAuth on the host. Ollama and optional OpenRouter use their own
+private keys. File Server cannot upload private configuration. Full instructions:
+[Usage source and setup guide](../projects/usage/README.md).
 
 ## First installation / another flash layout
 

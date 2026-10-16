@@ -53,16 +53,16 @@ small: 53×21 (7x5 thin, 6×10); large: 32×13 (13x7 semibold, 10×16).
 App slot maximum: 1,769,472 bytes; factory maximum: 524,288 bytes.
 Serial port names vary; discover them every session, never bake one into code.
 
-## Ollama Cloud Usage candidate
+## Usage candidate
 
-Project `projects/ollama-cloud-usage`, ESP image name `OllamaUsage`, version
-0.1.0. Prepared app image 1,032,400 bytes, original-ESP32 OTA slot only.
-Private SD config `/private/ollama.json`; app-owned NVS `ou_ui` stores theme,
-never credentials. Wi-Fi uses `common/terminal-core`, with read-only SD profiles.
-Official fixed HTTPS balance/history endpoints, 60s healthy polling, 24 KiB
-response cap, five-minute display sleep. Physical acceptance pending.
+Project `projects/usage`, image `Usage`, version 0.2.0. Prepared image
+1,050,400 bytes. Config `/private/usage.json`, optional bridge trust
+`/private/usage-ca.pem`; legacy Ollama config fallback. `ou_ui` theme namespace
+retained. Four sources; fixed Ollama/OpenRouter APIs or authenticated HTTPS feed.
+Codex helper reads existing login through app-server, never copies OAuth.
+Physical acceptance remains pending.
 
 ```sh
-bash projects/ollama-cloud-usage/tests/run-native.sh
-bash projects/ollama-cloud-usage/firmware/tools/build.sh build
+bash projects/usage/tests/run-native.sh
+bash projects/usage/firmware/tools/build.sh build
 ```

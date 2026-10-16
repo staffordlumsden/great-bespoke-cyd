@@ -7,7 +7,7 @@ small separate SD-installed firmware apps. The Console stays simple, apps
 share readable PixelFonts and themes, and data/configuration persist on SD.
 Humans choose outcomes and judge physical readability; agents implement,
 test, package and leave reproducible evidence. This public edition includes
-Console, File Server, Terminal Micro and the early-access Ollama Cloud Usage app.
+Console, File Server, Terminal Micro and the early-access Usage app.
 
 ## Required architecture
 
@@ -60,13 +60,16 @@ Retain the accepted AES-CTR/MAC/packet chunk limits; test heap with BLE and
 Wi-Fi active and high-output interactive apps. No full xterm or arbitrary
 Unicode claim. Remote applications execute on the SSH server, not on CYD.
 
-## Ollama Cloud Usage
+## Usage
 
-Touch dashboard using the official fixed-host bearer API: included or legacy
+Multi-provider dashboard: Codex reuses the host CLI login over a read-only TLS
+bridge; optional OpenRouter shows per-key spending; custom HTTPS feeds use a
+small normalized schema. Keep OAuth on the host, not the device. Providers have
+independent caches and retries. Ollama uses the official fixed-host bearer API: included or legacy
 allowances, reset countdowns, purchased credits and hourly 24H requests. Convert
 API remaining percentages to used percentages. Show unavailable cost/token
 metrics as unknown; never invent plan or model statistics. Private key comes
-from SD `/private/ollama.json`, not the binary, cookies or NVS. Require valid
+from SD `/private/usage.json` (legacy `/private/ollama.json` fallback), not the binary, cookies or NVS. Require valid
 time and verified HTTPS; disable redirects, bound JSON/transport work, respect
 rate limits and mark retained failed/aged data stale. Reuse read-only SD Wi-Fi
 profiles. Keep network I/O off the touch task and provide Console return.

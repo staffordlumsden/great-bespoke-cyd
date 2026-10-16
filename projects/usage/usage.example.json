@@ -1,0 +1,24 @@
+{
+  "providers": [
+    {
+      "type": "ollama",
+      "id": "ollama",
+      "label": "Ollama",
+      "api_key": "REPLACE_WITH_OLLAMA_KEY"
+    },
+    {
+      "type": "codex",
+      "id": "codex",
+      "label": "Codex",
+      "url": "https://192.0.2.2:8769/v1/providers/codex",
+      "api_key": "REPLACE_WITH_PRIVATE_BRIDGE_TOKEN",
+      "ca_file": "/private/usage-ca.pem"
+    },
+    {
+      "type": "openrouter",
+      "id": "openrouter",
+      "label": "OpenRouter",
+      "api_key": "REPLACE_WITH_OPENROUTER_KEY"
+    }
+  ]
+}

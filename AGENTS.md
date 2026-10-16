@@ -42,7 +42,7 @@ A skill is process guidance, never authorization to publish or flash.
 
 ## Quality and scope
 
-Keep Console a small launcher; Ollama Usage, Terminal Micro and File Server remain separate
+Keep Console a small launcher; Usage, Terminal Micro and File Server remain separate
 SD-installable apps. No native USB disk support on this original ESP32. Console
 Wi-Fi/BT tiles and Tailscale are placeholders, not working radio controls.
 Shutdown is deep sleep with touch wake, not USB power disconnection.

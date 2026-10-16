@@ -1,0 +1,9 @@
+{
+  "project": "Usage",
+  "version": "0.2.0",
+  "size_bytes": 1050400,
+  "sha256": "217fa28c529e37d1e4521651acac3e5d4fad21ced0ad170f0ea1345d7d11277e",
+  "chip": "esp32",
+  "slot_size": 1769472,
+  "image": "Usage-0.2.0.bin"
+}
