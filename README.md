@@ -24,7 +24,8 @@ The CYD receives read-only usage over verified HTTPS. No OpenAI Platform key
 is required. OpenRouter needs its own key only if you choose to add it.
 
 Pinned builds, automated tests and live host Ollama/Codex/parser checks pass.
-**Physical CYD acceptance is pending.** The download contains no real keys or
+**Basic CYD check passed:** SD installation, Codex meters and switching back to
+Ollama are user-confirmed. Extended runtime checks remain pending. The download contains no real keys or
 bridge certificates. An SD reader provisions the separate private configuration.
 
 ---

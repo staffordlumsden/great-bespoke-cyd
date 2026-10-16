@@ -64,3 +64,13 @@ change. Next: Console → Load from SD Card → Usage-0.2.0 → Install + run; s
 Codex and switch back to Ollama. Record observed results before accepting the
 candidate. ESP32 TLS/memory, touch, reconnect, sleep and Console/Run last still
 need device evidence. Existing accepted release/apps are unchanged.
+
+## 2026-10-16 — Usage 0.2.0 basic device check accepted
+
+User answered “all good” to the Console SD Install + run, Codex usage-meter
+and switch-back-to-Ollama check. Record those specific behaviours as accepted
+on the tested CYD. This confirms the normal device HTTPS data path works;
+no instrumented heap/stack or independent reset-accuracy measurement was taken.
+OpenRouter/custom live accounts, Run last, reconnect, sleep/wake and Console
+return were not separately tested in this check. Keep the release early access.
+No firmware bytes, private settings, keys or device state changed for this record.

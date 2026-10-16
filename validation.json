@@ -63,7 +63,7 @@
     "native": "PASS ASan/UBSan and Python HTTPS/RPC tests",
     "live": "Ollama and existing-login Codex feed pass actual firmware parser",
     "openrouter": "Fixture-tested; no key requested",
-    "physical_acceptance": "PENDING",
+    "physical_acceptance": "PASS user-observed SD install, Codex meters and switching back to Ollama on 2026-10-16; extended runtime checks pending",
     "private_config_or_oauth_published": false
   }
 }

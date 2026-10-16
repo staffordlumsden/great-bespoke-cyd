@@ -39,7 +39,8 @@ the actual C++ parser on the development host. Public screenshots are fixtures.
 No OAuth tokens or real private files are included. OpenRouter is fixture-tested;
 no account key was requested. See the app guide for the read-only host bridge.
 
-Pending physical CYD acceptance: install/Run last, actual MCU TLS/memory, source
-selection/readability, reset accuracy, reconnect, display sleep and Console
-return. This does not supersede the three accepted binaries above. Public source
+On 16 October 2026 the user confirmed Console SD installation, Codex usage
+meters and switching back to Ollama work on the tested CYD. Still pending:
+Run last, instrumented MCU memory, independent reset accuracy, reconnect,
+display sleep and Console return. This does not supersede the three accepted binaries above. Public source
 rebuilds remain candidates, not guaranteed bit-identical to the prepared image.
