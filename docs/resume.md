@@ -90,3 +90,16 @@ latest and other accepted images remain unchanged. Source rebuilds remain
 candidates rather than being silently substituted for the accepted binary.
 Image SHA-256: 41af56faff22d0ad2625f06fa82a0abfb3c5b71345a276544dd405a7efb05512.
 See release led-micro-v0.1.0 and current GitHub Actions for publication results.
+
+## 17 October 2026 — Weather and Quicknote publication
+
+Human accepted Weather's repaired basic workflow and resumed publication. Added
+Weather 0.1.1-stack and previously accepted Quicknote 0.1.0 source/tests/packages;
+public dependencies point to common/terminal-core rather than the excluded
+legacy app. Original accepted binaries retained; full notices added. Pages
+features both releases above the toolkit; Usage moves below the core apps.
+No raw UART, private locations/notes, keys, configs, device backups or SDK/build
+caches are included. See app guides/status for acceptance limits. Existing
+bootstrap latest and prior accepted assets remain unchanged. New public source
+builds and native/browser checks are recorded in validation.json; CI is shown
+on GitHub. No hardware/SD writes in this publication.

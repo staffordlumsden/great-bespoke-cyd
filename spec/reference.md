@@ -75,3 +75,19 @@ GPIO4 red, GPIO16 green, GPIO17 blue, active low; low-speed LEDC timer0,
 channels0–2, inverted 4 kHz/12-bit PWM. User confirmed colour/brightness/patterns
 and Console/Run last on 16 October 2026; no measured PWM frequency/current claim.
 The pin map is from the [primary reference](https://github.com/witnessmenow/ESP32-Cheap-Yellow-Display/blob/main/PINS.md#rgb-led).
+
+## Weather and Quicknote
+
+WeatherMicro 0.1.1-stack: 1,100,288 bytes; fixed verified Open-Meteo forecast/
+geocoding origins, up to six saved places, wx_ui preferences. Main and HTTPS
+worker stacks are 8 KiB. Compiler frame limit 2 KiB; bounded runtime search
+capture minimum main/worker stack 5,064/4,444 bytes. First frame precedes boot ack.
+QuicknoteMicro 0.1.0: 807,408 bytes; qn_ui preferences, shared BLE bond/clock,
+/files/QuickNote daily Markdown, hidden .draft recovery. No Wi-Fi required.
+
+```sh
+bash projects/weather-micro/tests/run-native.sh
+bash projects/weather-micro/firmware/tools/build.sh build
+bash projects/quicknote-micro/tests/run-native.sh
+bash projects/quicknote-micro/firmware/tools/build.sh build
+```

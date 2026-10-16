@@ -19,6 +19,27 @@ The Console is custom ESP-IDF firmware, independent of M5Launcher.
 4. **Run last** opens the last successful installed package. Verify Console
    return, Run last, retained keyboard bond and the app's actual operation.
 
+## Weather and Quicknote standalone releases
+
+An existing Console installation can add these without updating its launcher.
+Download either SD ZIP, verify its SHA256SUMS and copy the three matching
+`.bin`, `.json` and `-LICENSE.txt` files directly into SD `/firmware`.
+
+- **Weather Micro 0.1.1-stack:** saved 2.4 GHz Wi-Fi and valid time are required;
+  configure a new LAN with File Server first. Install + run, wait for Wi-Fi/time,
+  then Settings → Search + save. Select the correct place/region/country. No API
+  key is needed. Remove the unpublished faulty 0.1.0 development package if you
+  received it earlier; hold touch at power-on for five seconds for Console
+  recovery if that app is restarting.
+- **Quicknote Micro 0.1.0:** set Console's clock and wake/pair your B1. Install
+  + run, type and press Ctrl+S or Save. Notes go to
+  `/files/QuickNote/Daily/YYYY-MM-DD.md`; File Server can download them later.
+  Saving is blocked when time is unset. Notes and drafts are plaintext on SD.
+
+Preserve existing notes, profiles, keys and bonds; retain clock-capable File
+Server in the other slot. Do not flash either app over the factory Console.
+See each app guide and [acceptance limits](status.md) for details.
+
 ## Usage 0.2.0 early access
 
 Download the separate [Usage release](https://github.com/staffordlumsden/great-bespoke-cyd/releases/tag/usage-v0.2.0), verify its checksums and copy

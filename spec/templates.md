@@ -67,3 +67,14 @@ Private evidence path (local only; never publish its contents):
 
 Placeholders are placeholders, never PASS evidence. Humans confirm actual
 readability/device outcomes; agents build, test, explain and retain continuity.
+
+## Embedded memory record
+
+- Task stack allocation and compiler frame-size limit:
+- Largest application stack frame and important nested call chains:
+- Measured minimum stack/heap through render, network and error paths:
+- First successful frame before OTA acknowledgement:
+- Native sanitizer evidence versus actual MCU observations:
+
+Use Weather Micro's strict frame build as a reference; individual frame size
+does not prove an entire call chain fits. Do not label unmeasured paths PASS.

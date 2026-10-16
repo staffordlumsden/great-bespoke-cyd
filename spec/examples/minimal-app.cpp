@@ -58,9 +58,9 @@ extern "C" void app_main() {
             nvs_get_u8(handle,"light",&saved);nvs_close(handle);light=saved!=0;
         }
     }
-    myapp::confirm_first_boot(healthy);
     std::printf("EXAMPLE_BOARD healthy=%d accepted=NO\n",healthy);
-    if(board.display==ESP_OK)cyd::hal_render(pixel);
+    const bool first_frame=board.display==ESP_OK && cyd::hal_render(pixel)==ESP_OK;
+    myapp::confirm_first_boot(healthy && first_frame);
     bool pressed=false;unsigned released=0;int tx=0,ty=0;
     for(;;) {
         int x=0,y=0;const bool down=board.touch==ESP_OK&&cyd::hal_touch_poll(x,y);

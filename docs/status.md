@@ -56,3 +56,19 @@ PWM timing or current measurement was taken. The prepared image checksum is
 41af56faff22d0ad2625f06fa82a0abfb3c5b71345a276544dd405a7efb05512.
 Source-only public layout changes affect the build wrapper, not the accepted
 binary. No NVS erasure, partition change or other app update is involved.
+
+## New releases — 17 October 2026
+
+| Firmware | Preserved accepted image | Physical evidence and limits |
+|---|---|---|
+| Weather Micro | 0.1.1-stack, 1,100,288 bytes | User confirmed repaired location-search/NOW/5H workflow. UART: first frame before OTA confirmation, HTTPS search 200/results, minimum main/worker stacks 5,064/4,444 bytes, no panic in bounded captures. Multiple places, each chart, C/F/theme persistence, Console/Run last and fault cases not separately physically reported. |
+| Quicknote Micro | 0.1.0, 807,408 bytes | User acceptance completed 13 October with no issues reported; native editor/storage/draft/history/font tests and prior SD readback separately pass. Full-card/removal/cold-failure matrix remains unestablished. |
+
+Weather 0.1.0 was never a public release and is excluded. Its nested UI buffers
+overflowed the main task; 0.1.1-stack moves scratch off stack, enforces 2 KiB
+component frame limits and acknowledges OTA only after successful drawing.
+Public source adaptations only relocate shared code/build/test paths. Never
+replace accepted image bytes with public-layout rebuilds without new testing.
+No device writes occurred during this publication. The development card still
+needs its old Weather package replaced through a reader; this does not affect
+the corrected runtime or the public packages.

@@ -11,6 +11,10 @@ for page in ('legacy','activity','codex','openrouter','sources'):
  for theme in ('dark','light'):shots[f'usage-{page}-{theme}']=f'projects/usage/artifacts/native/{theme}-{page}.ppm'
 for page in ('colours','patterns','mixer'):
  for theme in ('dark','light'):shots[f'led-{page}-{theme}']=f'projects/led-micro/artifacts/native/{theme}-{page}.ppm'
+for page in ('current','hourly','details','settings','search','results'):
+ for theme in ('dark','light'):shots[f'weather-{page}-{theme}']=f'projects/weather-micro/artifacts/native/{theme}-{page}.ppm'
+for page in ('editor-dark','editor-light','history','clock-required'):
+ shots[f'quicknote-{page}']=f'projects/quicknote-micro/artifacts/native/{page}.ppm'
 for name,source in shots.items():
  p=r/f'site/assets/screenshots/{name}.png';p.parent.mkdir(parents=True,exist_ok=True);Image.open(r/source).save(p,optimize=True)
 for name in ('browser-dark','browser-light','browser-mobile-light'):shutil.copy2(r/f'projects/file-server/artifacts/browser/{name}.png',r/f'site/assets/screenshots/{name}.png')

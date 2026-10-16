@@ -39,3 +39,13 @@ included. Active-low R4/G16/B17 wiring is a documented hardware fact from the
 [primary CYD pin reference](https://github.com/witnessmenow/ESP32-Cheap-Yellow-Display/blob/main/PINS.md#rgb-led);
 no upstream LED driver source was copied. Full font/SDK/Mbed TLS notices are in
 [the app](projects/led-micro/THIRD_PARTY_NOTICES.md) and its SD licence file.
+
+## Weather Micro and Quicknote Micro
+
+Both apps reuse shared HAL/clock, pinned PixelFonts and ESP-IDF. Quicknote uses
+shared BLE HID support; its independent Markdown workflow copies no upstream
+Quicknote application code. Weather's native tests include pinned SDK cJSON
+(MIT). Weather data: [Open-Meteo](https://open-meteo.com/en/licence), CC BY 4.0;
+geocoding: [GeoNames](https://www.geonames.org/about.html). UI credits both.
+Full redistribution/data notices are in [Weather](projects/weather-micro/THIRD_PARTY_NOTICES.md)
+and [Quicknote](projects/quicknote-micro/THIRD_PARTY_NOTICES.md), and each SD package.

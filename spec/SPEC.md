@@ -7,7 +7,8 @@ small separate SD-installed firmware apps. The Console stays simple, apps
 share readable PixelFonts and themes, and data/configuration persist on SD.
 Humans choose outcomes and judge physical readability; agents implement,
 test, package and leave reproducible evidence. This public edition includes
-Console, File Server, Terminal Micro, LED Micro and the early-access Usage app.
+Console, File Server, Terminal Micro, Quicknote Micro, Weather Micro, LED Micro
+and the early-access Usage app.
 
 ## Required architecture
 
@@ -24,7 +25,9 @@ Console, File Server, Terminal Micro, LED Micro and the early-access Usage app.
   `-LICENSE.txt`. Maximum app 0x1b0000 bytes. JSON and the appended ESP image
   SHA-256 must verify before selecting the installed slot. Hash checks
   detect corruption; packages are not cryptographically publisher-signed.
-- An app confirms pending OTA only after its critical startup checks pass.
+- An app confirms pending OTA only after its critical startup checks and first
+  successfully rendered frame pass. Keep large UI/snapshot buffers off task
+  stacks; enforce compiler frame limits and measure runtime stack margins.
   Every app offers a visible Console return using the factory partition.
 - Keep one `CYDFileServer` version containing `-clock` for Console's Wi-Fi
   clock helper. Ordinary apps rotate through the other slot.
@@ -105,3 +108,24 @@ Label unperformed tests and separate renderer fixtures from device photographs.
 Publish one current package per app, SHA256SUMS and licence notices. Label candidate apps as early-access prereleases and list their pending physical checks; never silently replace an accepted image with an unaccepted rebuild.
 A rebuilt candidate is not hardware accepted merely because its source matches
 an accepted version. Keep known limitations and handoff state explicit.
+
+## Weather Micro
+
+Fixed-origin verified Open-Meteo HTTPS, valid time before TLS, a bounded worker
+and strict JSON/units/null handling. Read existing SD networks without rewriting
+credentials. Search/save at most six places in wx_ui; bind forecast caches to
+place IDs and discard removed-place replies. Current conditions, next five hourly
+point temperatures, 24-hour rain/wind/sun/moon panels and C/F. Daily high/low
+is distinct from hourly point temperature. Mark stale/unknown values honestly;
+moon illumination and daylight arc are schematic. Preserve app-owned settings,
+rate limits, Console access and an 8 KiB main task with measured stack margins.
+See the app guide for DST-offset limits and exact acceptance.
+
+## Quicknote Micro
+
+BLE B1 editor with adjustable PixelFonts, Ctrl+S/touch save, recoverable bounded
+drafts and daily history. Save timestamped Markdown to
+/files/QuickNote/Daily/YYYY-MM-DD.md; use Console clock and block saving if time
+is invalid. File Server transfers saved notes. A failed append retains editor
+text. Own only qn_ui settings; preserve shared BLE bond and other NVS namespaces.
+Plaintext SD notes are private user data, never sample screenshots.

@@ -12,3 +12,10 @@ user-confirmed and extended checks pending.
 Private keys, device settings and bridge certificates are separate and are not
 in this folder. Previous accepted bundles and Ollama 0.1.0 remain in historical
 releases. The current app guide is `../projects/usage/README.md`.
+
+New standalone releases: WeatherMicro-0.1.1-stack (basic weather workflow
+user-accepted) and QuicknoteMicro-0.1.0 (user-accepted). Their original binaries
+are unchanged; all packages have full notices. Do not install unpublished
+WeatherMicro-0.1.0: it had a startup stack overflow and is not distributed here.
+Bootstrap latest remains the existing Console/File Server/Terminal bundle;
+install these additional apps from their separate SD ZIP releases.

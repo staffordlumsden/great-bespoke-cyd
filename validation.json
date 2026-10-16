@@ -1,10 +1,13 @@
 {
-  "date": "2026-10-14",
+  "date": "2026-10-17",
   "scope": [
     "CYD Console",
     "File Server",
     "Terminal Micro",
-    "Usage (early access)"
+    "Usage (early access)",
+    "LED Micro",
+    "Weather Micro",
+    "Quicknote Micro"
   ],
   "hardware_written_during_publication": false,
   "sdk": {
@@ -16,7 +19,10 @@
     "File Server": "PASS",
     "Terminal Micro": "PASS",
     "generated HelloCYD scaffold": "PASS",
-    "Ollama Usage public layout": "PASS"
+    "Ollama Usage public layout": "PASS",
+    "Weather Micro public layout": "PASS pinned SDK",
+    "Quicknote Micro public layout": "PASS pinned SDK",
+    "generated first-frame-gated scaffold": "PASS pinned SDK"
   },
   "native_tests": {
     "tooling": "ASan + UBSan",
@@ -24,13 +30,16 @@
     "clock conversions": "PASS",
     "File Server policy and renderer": "PASS",
     "Terminal fonts, geometry, touch, ANSI and DMA bounds": "PASS",
-    "Ollama model/config/storage/poll/UI and HTTP transport fakes": "PASS"
+    "Ollama model/config/storage/poll/UI and HTTP transport fakes": "PASS",
+    "Weather model/cache/UI, actual HTTPS fakes, read-only networks": "PASS ASan/UBSan",
+    "Quicknote editor/draft/storage/history/fonts": "PASS ASan/UBSan"
   },
   "browser_tests": {
     "File Server real HTML + mock API": "PASS",
     "Pages desktop/tablet/mobile/320px, two themes, persistence, fonts, assets, navigation": "PASS",
     "Published Pages site: fonts, all assets, both themes, persistence, 4 viewports and navigation": "PASS",
-    "Featured Ollama release: 4 viewports, two themes, direct download and navigation": "PASS"
+    "Featured Ollama release: 4 viewports, two themes, direct download and navigation": "PASS",
+    "Weather + Quicknote feature, Usage below core apps": "PASS 1440/768/390/320px, both themes, persistence, fonts, assets and navigation"
   },
   "screenshots": "Real renderers/browser UI with public fixtures; no live private sessions or hardware photographs",
   "release_binaries": "Accepted original binaries unchanged; public-layout rebuilds are candidates until physical acceptance",
@@ -74,5 +83,21 @@
     "private_build_native_package": "PASS",
     "public_build_native_browser": "PASS pinned public-layout ESP32 build, full native suite, four-viewport two-theme Pages and File Server browser tests",
     "limits": "RGB mixer, themes and saved preferences not separately physically reported; no instrumented PWM/optical/current measurements"
+  },
+  "weather_0_1_1_stack": {
+    "physical_acceptance": "User confirmed repaired location-search/NOW/5H workflow on 2026-10-17",
+    "size_bytes": 1100288,
+    "sha256": "ed9cb897148ccf9bed52b3712ce52b88c93ee9dfa2d2942863cdfc2dbf67c06e",
+    "main_stack_min_bytes": 5064,
+    "https_worker_stack_min_bytes": 4444,
+    "instrumented": "First frame before OTA confirm; real HTTPS search HTTP200; no panic in bounded captures",
+    "remaining": "Multiple-place persistence, individual charts, physical theme/unit persistence, Console/Run last and failure matrix not separately reported",
+    "unpublished_0_1_0": "Known bad, excluded"
+  },
+  "quicknote_0_1_0": {
+    "physical_acceptance": "User acceptance complete with no issues reported on 2026-10-13",
+    "size_bytes": 807408,
+    "sha256": "295b035e124681daa4c4435c0cdc056e55e590f1a6121a7876a8f680fab446a0",
+    "remaining": "Destructive SD removal/full-card and cold-failure matrix not established"
   }
 }

@@ -1,0 +1,9 @@
+{
+  "project": "WeatherMicro",
+  "version": "0.1.1-stack",
+  "size_bytes": 1100288,
+  "sha256": "ed9cb897148ccf9bed52b3712ce52b88c93ee9dfa2d2942863cdfc2dbf67c06e",
+  "chip": "esp32",
+  "slot_size": 1769472,
+  "image": "WeatherMicro-0.1.1-stack.bin"
+}

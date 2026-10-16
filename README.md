@@ -1,53 +1,52 @@
 # Great Bespoke CYD
 
-**A resident Console, a multi-provider AI usage dashboard, browser SD file transfer, a readable SSH terminal and RGB LED controls for the original ESP32 Cheap Yellow Display.**
+**A resident Console, weather, daily Markdown notes, browser file transfer, SSH, AI usage and RGB LED controls for the original ESP32 Cheap Yellow Display.**
 
 [Project website](https://staffordlumsden.github.io/great-bespoke-cyd/) ·
 [Download firmware](https://github.com/staffordlumsden/great-bespoke-cyd/releases/latest) ·
 [Install safely](docs/install.md) · [Build a new app](spec/SPEC.md)
 
-## New release: Usage 0.2.0
+## New releases: Weather Micro and Quicknote Micro
 
-**Ollama + Codex, with room for more.** The renamed Usage app adds a source
-selector, Codex's five-hour/weekly allowances, optional OpenRouter key spending
-and authenticated custom JSON feeds. Same PixelFonts and both themes.
+**A forecast at a glance. A place to keep your thoughts.** Two new standalone
+SD apps use the same PixelFonts, large controls and dark/mint-blue themes.
 
-[**Download Usage 0.2.0 — early access**](https://github.com/staffordlumsden/great-bespoke-cyd/releases/tag/usage-v0.2.0) ·
-[Setup, existing Codex login and providers](projects/usage/README.md) ·
-[See the dashboard](https://staffordlumsden.github.io/great-bespoke-cyd/#usage)
+### Weather Micro 0.1.1-stack
 
-![Codex windows, public firmware-renderer fixture](site/assets/screenshots/usage-codex-dark.png)
-![Usage source selector, public firmware-renderer fixture](site/assets/screenshots/usage-sources-light.png)
+Open-Meteo current conditions, five hourly time/icon/temperature columns and
+four detail panels for 24-hour rain, wind, daylight and the moon. Search and save
+up to six locations; switch C/F without another API call. No API key or keyboard.
 
-The Mac bridge reuses the signed-in Codex CLI and keeps OAuth on the host.
-The CYD receives read-only usage over verified HTTPS. No OpenAI Platform key
-is required. OpenRouter needs its own key only if you choose to add it.
+[**Download Weather Micro**](https://github.com/staffordlumsden/great-bespoke-cyd/releases/tag/weather-v0.1.1-stack) ·
+[Weather guide](projects/weather-micro/README.md) ·
+[See all four screens](https://staffordlumsden.github.io/great-bespoke-cyd/#weather)
 
-Pinned builds, automated tests and live host Ollama/Codex/parser checks pass.
-**Basic CYD check passed:** SD installation, Codex meters and switching back to
-Ollama are user-confirmed. Extended runtime checks remain pending. The download contains no real keys or
-bridge certificates. An SD reader provisions the separate private configuration.
+![Weather now](site/assets/screenshots/weather-current-dark.png)
+![Weather details in mint and blue](site/assets/screenshots/weather-details-light.png)
 
-## New app: LED Micro 0.1.0
+Basic location-search/NOW/5H workflow is user-accepted on the tested CYD.
+Charts, multiple-place persistence and failure scenarios have automated coverage
+but were not separately physically accepted. The unpublished faulty 0.1.0
+package is excluded; 0.1.1-stack fixes the startup stack overflow.
 
-**A small offline controller for the CYD's RGB LED.** Choose a colour, mix RGB,
-set brightness or use solid/flashing light. Alternate blue/red, green/yellow or
-green/white, adjust the speed, or tap FLASHLIGHT for full-brightness solid white.
-The same PixelFonts, dark and mint/blue themes and large touch controls keep it
-familiar. It needs no network, keyboard or configuration file.
+### Quicknote Micro 0.1.0
 
-[**Download LED Micro 0.1.0**](https://github.com/staffordlumsden/great-bespoke-cyd/releases/tag/led-micro-v0.1.0) ·
-[Controls and installation](projects/led-micro/README.md) ·
-[See the screens](https://staffordlumsden.github.io/great-bespoke-cyd/#led)
+Write with the Winmaxle B1, save with **Ctrl+S** or touch, and build one Markdown
+file per day with timestamped entries. Recoverable drafts, adjustable fonts,
+daily history and Console's shared clock keep it useful offline. Download your
+notes later through File Server. No account or cloud service is required.
 
-![LED Micro colour controls](site/assets/screenshots/led-colours-dark.png)
-![LED Micro patterns in mint/blue](site/assets/screenshots/led-patterns-light.png)
+[**Download Quicknote Micro**](https://github.com/staffordlumsden/great-bespoke-cyd/releases/tag/quicknote-v0.1.0) ·
+[Notes and keyboard guide](projects/quicknote-micro/README.md) ·
+[See the editor](https://staffordlumsden.github.io/great-bespoke-cyd/#quicknote)
 
-**User-accepted on the tested CYD:** SD installation, primary colours,
-brightness, power, all patterns/speeds, flashlight and Console/Run last. Power
-starts OFF and Console return turns the LED off. The RGB mixer, themes and
-preference persistence have native coverage but were not separately reported
-in the physical check. Previews are actual renderer fixtures, not photographs.
+![Quicknote editor](site/assets/screenshots/quicknote-editor-dark.png)
+![Quicknote in mint and blue](site/assets/screenshots/quicknote-editor-light.png)
+
+User acceptance completed on 13 October 2026 with no issues reported. Automated
+tests separately cover editing, drafts, Markdown storage and bounded history;
+that broad report does not establish destructive SD-failure tests.
+
 
 ---
 
@@ -68,10 +67,12 @@ more than squeezing another row of tiny controls onto a 320×240 panel.
 | [CYD Console](projects/launcher/README.md) | Resident SD firmware launcher, clock, themes, sleep/touch wake | **0.3.3-sleep** |
 | [File Server](projects/file-server/README.md) | Browser upload/download over 2.4 GHz Wi-Fi, progress/cancel, network setup | **0.1.2-clock** |
 | [Terminal Micro](projects/terminal-micro/README.md) | BLE keyboard + pinned-host SSH + bounded ANSI terminal | **0.2.3-headroom** |
+| [Weather Micro](projects/weather-micro/README.md) | Open-Meteo current/hourly weather, rain/wind/sun/moon and saved places | **0.1.1-stack · basic workflow accepted** |
+| [Quicknote Micro](projects/quicknote-micro/README.md) | Offline, timestamped daily Markdown notes with BLE keyboard and drafts | **0.1.0 · user-accepted** |
 | [Usage](projects/usage/README.md) | Ollama/Codex allowances, OpenRouter key budgets and custom feeds | **0.2.0 · early access** |
 | [LED Micro](projects/led-micro/README.md) | Offline RGB LED, colour/brightness, patterns and white flashlight | **0.1.0 · user-accepted** |
 
-This public edition contains these five tools and their shared dependencies.
+This public edition contains these seven tools and their shared dependencies.
 Other private apps are excluded. Console is custom ESP-IDF firmware; it is not
 a fork or port of M5Launcher.
 
@@ -84,7 +85,7 @@ mock API. They explain the layout without exposing network names, credentials,
 host fingerprints or private terminal output. They do not substitute for hardware
 acceptance. The website's decorative yellow device frame is CSS.
 
-Console, File Server, Terminal Micro and LED Micro preserve the builds accepted on the original tested CYD. Usage is a separately labelled early-access candidate.
+Console, File Server, Terminal Micro, LED Micro, Quicknote and Weather preserve the builds accepted on the original tested CYD. Usage is a separately labelled early-access candidate.
 Source layout has been made portable and shared terminal code extracted to
 `common/`. A source rebuild is a **candidate**, not a bit-identical or newly
 hardware-accepted image. See [release evidence and limits](docs/status.md) and
@@ -190,6 +191,51 @@ The legacy app is not required or distributed. Never commit your edited profile
 or private key. A FAT32 card cannot enforce confidentiality; revoke the dedicated
 server key if the card/device is lost.
 
+## LED Micro 0.1.0
+
+**A small offline controller for the CYD's RGB LED.** Choose a colour, mix RGB,
+set brightness or use solid/flashing light. Alternate blue/red, green/yellow or
+green/white, adjust the speed, or tap FLASHLIGHT for full-brightness solid white.
+The same PixelFonts, dark and mint/blue themes and large touch controls keep it
+familiar. It needs no network, keyboard or configuration file.
+
+[**Download LED Micro 0.1.0**](https://github.com/staffordlumsden/great-bespoke-cyd/releases/tag/led-micro-v0.1.0) ·
+[Controls and installation](projects/led-micro/README.md) ·
+[See the screens](https://staffordlumsden.github.io/great-bespoke-cyd/#led)
+
+![LED Micro colour controls](site/assets/screenshots/led-colours-dark.png)
+![LED Micro patterns in mint/blue](site/assets/screenshots/led-patterns-light.png)
+
+**User-accepted on the tested CYD:** SD installation, primary colours,
+brightness, power, all patterns/speeds, flashlight and Console/Run last. Power
+starts OFF and Console return turns the LED off. The RGB mixer, themes and
+preference persistence have native coverage but were not separately reported
+in the physical check. Previews are actual renderer fixtures, not photographs.
+
+
+## Usage 0.2.0
+
+**Ollama + Codex, with room for more.** The renamed Usage app adds a source
+selector, Codex's five-hour/weekly allowances, optional OpenRouter key spending
+and authenticated custom JSON feeds. Same PixelFonts and both themes.
+
+[**Download Usage 0.2.0 — early access**](https://github.com/staffordlumsden/great-bespoke-cyd/releases/tag/usage-v0.2.0) ·
+[Setup, existing Codex login and providers](projects/usage/README.md) ·
+[See the dashboard](https://staffordlumsden.github.io/great-bespoke-cyd/#usage)
+
+![Codex windows, public firmware-renderer fixture](site/assets/screenshots/usage-codex-dark.png)
+![Usage source selector, public firmware-renderer fixture](site/assets/screenshots/usage-sources-light.png)
+
+The Mac bridge reuses the signed-in Codex CLI and keeps OAuth on the host.
+The CYD receives read-only usage over verified HTTPS. No OpenAI Platform key
+is required. OpenRouter needs its own key only if you choose to add it.
+
+Pinned builds, automated tests and live host Ollama/Codex/parser checks pass.
+**Basic CYD check passed:** SD installation, Codex meters and switching back to
+Ollama are user-confirmed. Extended runtime checks remain pending. The download contains no real keys or
+bridge certificates. An SD reader provisions the separate private configuration.
+
+
 ## Install the release
 
 For Usage, use the separate [0.2.0 early-access download](https://github.com/staffordlumsden/great-bespoke-cyd/releases/tag/usage-v0.2.0) and its [SD setup guide](projects/usage/README.md).
@@ -236,6 +282,8 @@ bash projects/launcher/firmware/tools/build.sh build
 bash projects/file-server/firmware/tools/build.sh build
 bash projects/terminal-micro/firmware/tools/build.sh build
 bash projects/usage/firmware/tools/build.sh build
+bash projects/quicknote-micro/firmware/tools/build.sh build
+bash projects/weather-micro/firmware/tools/build.sh build
 bash tools/test.sh
 ```
 

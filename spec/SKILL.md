@@ -1,6 +1,6 @@
 ---
 name: great-bespoke-cyd
-description: Build, review, test and package ESP-IDF firmware apps for the original 4 MB ESP32 CYD and Great Bespoke CYD Console. Use for this platform's launcher, SD installers, touchscreen UI, BLE keyboard, SSH terminal or file-transfer apps; not for generic ESP32-S3/M5 firmware.
+description: Build, review, test and package ESP-IDF firmware apps for the original 4 MB ESP32 CYD and Great Bespoke CYD Console. Use for this platform's launcher, SD installers, touchscreen UI, BLE keyboard, SSH terminal, file-transfer, weather or daily-note apps; not for generic ESP32-S3/M5 firmware.
 ---
 
 # Great Bespoke CYD firmware workflow
@@ -19,7 +19,9 @@ being installed inside the repository or on a personal absolute path.
    `spec/examples/minimal-app.cpp`; generated code is not hardware accepted.
 4. Run the app's pinned build wrapper, then relevant native tests. Use
    `bash tools/test.sh` for shared changes. Inspect memory, slot size and
-   actual hit targets; retain full licence notices in packages.
+   actual hit targets; retain full licence notices in packages. For new firmware,
+   keep large buffers off task stacks, measure runtime margins and confirm
+   pending OTA only after the first successful rendered frame.
 5. Package with `python3 projects/launcher/tools/package_sd_app.py --image
    projects/<app>/firmware/build/<Project>.bin --output
    projects/<app>/artifacts/sd-library`. Never treat this app image as Console.

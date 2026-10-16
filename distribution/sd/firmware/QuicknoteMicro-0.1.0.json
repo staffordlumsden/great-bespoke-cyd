@@ -1,0 +1,9 @@
+{
+  "project": "QuicknoteMicro",
+  "version": "0.1.0",
+  "size_bytes": 807408,
+  "sha256": "295b035e124681daa4c4435c0cdc056e55e590f1a6121a7876a8f680fab446a0",
+  "chip": "esp32",
+  "slot_size": 1769472,
+  "image": "QuicknoteMicro-0.1.0.bin"
+}

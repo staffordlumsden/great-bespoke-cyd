@@ -1,5 +1,5 @@
 cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30  ESP-IDF-LICENSE.txt
-88b603781ba08ff9d51e99cc00a3802c74a4205c969c8e5f329eb697af15e0ce  README.md
+b4f968702a068cc2a51366d6ac04601d6bf8c0c4f8b81e812dd71db1ab189637  README.md
 5851c0c2e04e8add20afb5fdc93c51a301ff970d6b4c40b49a6fdf933c31329f  console/CYDConsole-0.3.3-sleep.bin
 d872acc52c9aba32b73d840ffe15ce8ad7c2595d5a26d0492dbc8303dc71120d  console/LICENSE.txt
 1ff3841ce0f3289288293468906da016e72513c6c5494f55db2da930af9c6075  console/bootloader.bin
@@ -11,9 +11,15 @@ f1c026999a25f97372342bed6a72fce3f9b0974e37f16d49d08bba68f89905a9  sd/firmware/CY
 341c86a5a967958a6f351e72f940f84f36ec1461d9485595a8d528e4102622f0  sd/firmware/LEDMicro-0.1.0-LICENSE.txt
 41af56faff22d0ad2625f06fa82a0abfb3c5b71345a276544dd405a7efb05512  sd/firmware/LEDMicro-0.1.0.bin
 c8f0af7d5da1aaa8098365073b97eed29ec85b6291abd7d2ee783c2558493092  sd/firmware/LEDMicro-0.1.0.json
+f231cdd1b211ec2b3339147f49dde9fd0b89e0e6c9f3d0ea83f09279d3bda191  sd/firmware/QuicknoteMicro-0.1.0-LICENSE.txt
+295b035e124681daa4c4435c0cdc056e55e590f1a6121a7876a8f680fab446a0  sd/firmware/QuicknoteMicro-0.1.0.bin
+853ccbfdd03f29186d23263ffbe3b9503644b48ef87da4a28ef681ffcacbb162  sd/firmware/QuicknoteMicro-0.1.0.json
 5411566d5538f1f778748f045873da8ca7d6118a5390b0c9e599214b265d70e4  sd/firmware/TerminalMicro-0.2.3-headroom-LICENSE.txt
 53e369daa2d3bdaf32624888d86d38273b91a3ff41e709479eb35e73b2b027f7  sd/firmware/TerminalMicro-0.2.3-headroom.bin
 6a95b593c135ed4984f2de7098f2de14e190f83b383c94c286cddc425fefdba6  sd/firmware/TerminalMicro-0.2.3-headroom.json
 18a4988c54602c1610ad3baca015cc217bbabc387379a0a9ba3dc5c3725587fd  sd/firmware/Usage-0.2.0-LICENSE.txt
 217fa28c529e37d1e4521651acac3e5d4fad21ced0ad170f0ea1345d7d11277e  sd/firmware/Usage-0.2.0.bin
 69e466da249f50110e60b60d49e303194037729f37a4aad7522119b5ac28247a  sd/firmware/Usage-0.2.0.json
+0270a8cbf394ed4c464e4151feff287801b2aad8f6ecdc98e45daa69d7306f8c  sd/firmware/WeatherMicro-0.1.1-stack-LICENSE.txt
+ed9cb897148ccf9bed52b3712ce52b88c93ee9dfa2d2942863cdfc2dbf67c06e  sd/firmware/WeatherMicro-0.1.1-stack.bin
+10fc182656d50acd23a3971827f111e414bbf954b1a5c9652361eafd44afb203  sd/firmware/WeatherMicro-0.1.1-stack.json

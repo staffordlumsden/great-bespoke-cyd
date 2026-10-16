@@ -10,7 +10,7 @@ for base,dirs,names in os.walk(ROOT):
  for name in names:
   if name.startswith('._') or name=='.DS_Store':continue
   p=Path(base)/name;rel=p.relative_to(ROOT).as_posix();count+=1
-  if any(part in ('contextual-micro','quicknote-micro') for part in p.relative_to(ROOT).parts):errors.append('Excluded app path: '+rel)
+  if any(part in ('contextual-micro',) for part in p.relative_to(ROOT).parts):errors.append('Excluded app path: '+rel)
   if name.endswith(('.pem','.key')) or (name=='config.json'):errors.append('Private config/key file: '+rel)
   data=p.read_bytes()
   if re.search(rb'-----BEGIN (?:RSA |OPENSSH |EC )?PRIVATE KEY-----\r?\n[A-Za-z0-9+/]{32}',data):errors.append('Private key material: '+rel)

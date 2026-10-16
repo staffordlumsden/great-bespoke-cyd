@@ -49,3 +49,12 @@ PixelFonts and mint/blue tokens; pair colour with USED/STALE/error text. Do not
 render missing API metrics as zero. Usage 0.2.0 uses 34 px bottom controls and 35 px source rows. The top source-name
 button opens the provider list. Keep status text out of source/setup cards;
 physical readability/touch acceptance is still required.
+
+## Weather and Quicknote
+
+Weather uses four persistent tabs (NOW, 5H, DETAILS, SETTINGS), centred large
+current temperature, original weather icons, a large touch search keyboard and
+a visible Console action. Maintain the three-row hourly hierarchy and clearly
+mark unavailable/stale data. Quicknote prioritizes the editor and cursor,
+adjustable PixelFonts, Save/Today/font/Console actions and the shared clock.
+Public screenshots use sample notes and public forecast fixtures only.

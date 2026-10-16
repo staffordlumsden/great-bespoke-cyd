@@ -9,4 +9,6 @@ bash projects/file-server/tests/run-native.sh
 bash projects/terminal-micro/tests/run-native.sh
 bash projects/usage/tests/run-native.sh
 bash projects/led-micro/tests/run-native.sh
+bash projects/quicknote-micro/tests/run-native.sh
+bash projects/weather-micro/tests/run-native.sh
 python3 tools/validate_public.py
